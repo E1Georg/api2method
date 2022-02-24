@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-// Перед проведение unit-тестов необходимо закомментировать в конструкторе подключения к БД(data/MyDBContext.cs) строки
+// Перед проведением unit-тестов необходимо закомментировать в конструкторе подключения к БД(Data/MyDBContext.cs) строки
 // Database.EnsureDeleted(); и Database.EnsureCreated(); <- иначе данные в БД удаляться.
 // Пересоздание db было добавлено, согласно общему заданию на работу
 namespace API_T2.Tests
