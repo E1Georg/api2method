@@ -34,7 +34,7 @@ namespace API_T2
             httpWebRequest.Method = "GET";          
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
 
-            // Получение списка жителей, но без возраста каждого жителя. Используется для получения id каждого жителя.
+            // РџРѕР»СѓС‡РµРЅРёРµ СЃРїРёСЃРєР° Р¶РёС‚РµР»РµР№, РЅРѕ Р±РµР· РІРѕР·СЂР°СЃС‚Р° РєР°Р¶РґРѕРіРѕ Р¶РёС‚РµР»СЏ. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ id РєР°Р¶РґРѕРіРѕ Р¶РёС‚РµР»СЏ.
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
                 var answer = streamReader.ReadToEnd();             
@@ -49,7 +49,7 @@ namespace API_T2
                     httpWebRequest.Method = "GET";
                     httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
 
-                    // Получение списка жителей, но уже со всеми данными, с указанием возраста(по id). 
+                     // РџРѕР»СѓС‡РµРЅРёРµ СЃРїРёСЃРєР° Р¶РёС‚РµР»РµР№, РЅРѕ СѓР¶Рµ СЃРѕ РІСЃРµРјРё РґР°РЅРЅС‹РјРё, СЃ СѓРєР°Р·Р°РЅРёРµРј РІРѕР·СЂР°СЃС‚Р°(РїРѕ id).  
                     using (var streamReaderFullList = new StreamReader(httpResponse.GetResponseStream()))
                     {
                         var answerWithFullData = streamReaderFullList.ReadToEnd();
